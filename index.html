@@ -1,162 +1,64 @@
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mod Core — Лучшие моды и игры</title>
+    <title>Mod Core — Витрина Модов</title>
     <style>
-        :root {
-            --bg-color: #0b0e14;
-            --card-bg: #161b22;
-            --accent-blue: #00d2ff;
-            --accent-purple: #9d50bb;
-            --text-color: #ffffff;
-            --text-dim: #8b949e;
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Шапка сайта */
-        header {
-            width: 100%;
-            padding: 40px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #161b22 0%, #0b0e14 100%);
-            border-bottom: 1px solid #30363d;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            color: var(--text-dim);
-            margin-top: 10px;
-        }
-
-        /* Сетка с карточками */
-        .container {
-            max-width: 1200px;
-            width: 90%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 40px 0;
-        }
-
-        /* Стили карточки мода */
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid #30363d;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-blue);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            background-color: #21262d;
-        }
-
-        .card-content {
-            padding: 20px;
-        }
-
-        .card-title {
-            font-size: 1.2rem;
-            margin: 0 0 10px 0;
-            font-weight: 600;
-        }
-
-        .card-desc {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            line-height: 1.4;
-            margin-bottom: 20px;
-            height: 40px;
-            overflow: hidden;
-        }
-
-        .btn-download {
-            display: block;
-            text-align: center;
-            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
-            color: white;
-            text-decoration: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-
-        .btn-download:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            padding: 40px;
-            color: var(--text-dim);
-            font-size: 0.8rem;
-        }
+        :root { --bg: #0b1016; --card: #1c232d; --accent: #00d2ff; --text: #ffffff; }
+        body { font-family: sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; align-items: center; }
+        header { padding: 50px 20px; text-align: center; background: #161b22; width: 100%; border-bottom: 2px solid var(--accent); }
+        h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 3px; background: linear-gradient(to right, #00d2ff, #9d50bb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; width: 90%; max-width: 1200px; padding: 40px 0; }
+        .card { background: var(--card); border-radius: 15px; overflow: hidden; border: 1px solid #30363d; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card img { width: 100%; height: 160px; object-fit: cover; }
+        .info { padding: 20px; }
+        .btn { display: block; background: var(--accent); color: #000; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Mod Core</h1>
-        <p>Премиум моды и взломанные игры для твоего Android</p>
-    </header>
+<header>
+    <h1>Mod Core</h1>
+    <p>Твой личный архив приложений</p>
+</header>
 
-    <div class="container">
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180/21262d/00d2ff?text=Game+Image" alt="Game" class="card-img">
-            <div class="card-content">
-                <h3 class="card-title">Standoff 2 Mod</h3>
-                <p class="card-desc">Много денег, скины и открытый инвентарь. Последняя версия.</p>
-                <a href="#" class="btn-download">Скачать APK</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180/21262d/9d50bb?text=Mod+Image" alt="Game" class="card-img">
-            <div class="card-content">
-                <h3 class="card-title">Название игры</h3>
-                <p class="card-desc">Короткое описание того, что дает твой мод.</p>
-                <a href="ССЫЛКА_НА_ФАЙЛ" class="btn-download">Скачать APK</a>
-            </div>
-        </div>
-
+<div class="grid" id="app-list">
     </div>
 
-    <footer>
-        &copy; 2026 Mod Core. Все права защищены.
-    </footer>
+<script>
+    // === ВОТ ЭТОТ СПИСОК ТЕБЕ НУЖНО РЕДАКТИРОВАТЬ ===
+    const myGames = [
+        {
+            name: "Standoff 2 Mod",
+            desc: "Много денег, скины открыты.",
+            img: "https://via.placeholder.com/300x160/21262d/00d2ff?text=Standoff+2",
+            link: "#"
+        },
+        {
+            name: "Brawl Stars",
+            desc: "Приватный сервер, всё разблокировано.",
+            img: "https://via.placeholder.com/300x160/21262d/9d50bb?text=Brawl+Stars",
+            link: "#"
+        },
+        // Чтобы добавить новую игру, просто скопируй блок выше (от { до },) и вставь ниже
+    ];
+
+    // Код, который превращает список в красивые карточки
+    const container = document.getElementById('app-list');
+    myGames.forEach(game => {
+        container.innerHTML += `
+            <div class="card">
+                <img src="${game.img}">
+                <div class="info">
+                    <h3>${game.name}</h3>
+                    <p>${game.desc}</p>
+                    <a href="${game.link}" class="btn">СКАЧАТЬ APK</a>
+                </div>
+            </div>`;
+    });
+</script>
 
 </body>
 </html>
