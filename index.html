@@ -1,78 +1,86 @@
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModCore — Лучшие моды для Android</title>
+    <title>Mod Core — Лучшие моды и игры</title>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --accent-color: #38bdf8;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
+            --bg-color: #0b0e14;
+            --card-bg: #161b22;
+            --accent-blue: #00d2ff;
+            --accent-purple: #9d50bb;
+            --text-color: #ffffff;
+            --text-dim: #8b949e;
         }
 
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-main);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
+        /* Шапка сайта */
         header {
-            background-color: rgba(30, 41, 59, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 20px;
+            width: 100%;
+            padding: 40px 20px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #334155;
+            background: linear-gradient(135deg, #161b22 0%, #0b0e14 100%);
+            border-bottom: 1px solid #30363d;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--accent-color);
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
+        header p {
+            color: var(--text-dim);
+            margin-top: 10px;
+        }
+
+        /* Сетка с карточками */
         .container {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .grid {
+            width: 90%;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 25px;
+            padding: 40px 0;
         }
 
+        /* Стили карточки мода */
         .card {
-            background: var(--card-bg);
-            border-radius: 15px;
+            background-color: var(--card-bg);
+            border-radius: 16px;
             overflow: hidden;
-            transition: transform 0.3s ease;
-            border: 1px solid #334155;
+            border: 1px solid #30363d;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
         }
 
         .card-img {
             width: 100%;
-            height: 160px;
-            background: #334155;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
+            height: 180px;
+            object-fit: cover;
+            background-color: #21262d;
         }
 
         .card-content {
@@ -80,84 +88,75 @@
         }
 
         .card-title {
-            font-size: 18px;
+            font-size: 1.2rem;
             margin: 0 0 10px 0;
+            font-weight: 600;
         }
 
-        .card-meta {
+        .card-desc {
+            font-size: 0.9rem;
             color: var(--text-dim);
-            font-size: 14px;
-            margin-bottom: 15px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            height: 40px;
+            overflow: hidden;
         }
 
-        .download-btn {
+        .btn-download {
             display: block;
-            background: var(--accent-color);
-            color: #0f172a;
             text-align: center;
-            padding: 10px;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+            color: white;
             text-decoration: none;
+            padding: 12px;
             border-radius: 8px;
-            font-weight: bold;
+            font-weight: 600;
             transition: opacity 0.2s;
         }
 
-        .download-btn:hover {
-            opacity: 0.8;
+        .btn-download:hover {
+            opacity: 0.9;
         }
 
         footer {
-            text-align: center;
             padding: 40px;
             color: var(--text-dim);
-            border-top: 1px solid #334155;
-            margin-top: 50px;
+            font-size: 0.8rem;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">ModCore.click</div>
-</header>
+    <header>
+        <h1>Mod Core</h1>
+        <p>Премиум моды и взломанные игры для твоего Android</p>
+    </header>
 
-<div class="container">
-    <h1 style="text-align: center; margin-bottom: 40px;">Популярные моды</h1>
-    
-    <div class="grid">
-        <div class="card">
-            <div class="card-img">🎮</div>
-            <div class="card-content">
-                <h3 class="card-title">Minecraft Mod</h3>
-                <div class="card-meta">v1.20.0 • Бессмертие</div>
-                <a href="#" class="download-btn">Скачать APK</a>
-            </div>
-        </div>
+    <div class="container">
 
         <div class="card">
-            <div class="card-img">🚗</div>
-            <div class="card-content">
-                <h3 class="card-title">Car Parking</h3>
-                <div class="card-meta">v4.8.9 • Много денег</div>
-                <a href="#" class="download-btn">Скачать APK</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img">🔫</div>
+            <img src="https://via.placeholder.com/300x180/21262d/00d2ff?text=Game+Image" alt="Game" class="card-img">
             <div class="card-content">
                 <h3 class="card-title">Standoff 2 Mod</h3>
-                <div class="card-meta">v0.25.0 • Меню</div>
-                <a href="#" class="download-btn">Скачать APK</a>
+                <p class="card-desc">Много денег, скины и открытый инвентарь. Последняя версия.</p>
+                <a href="#" class="btn-download">Скачать APK</a>
             </div>
         </div>
-    </div>
-</div>
 
-<footer>
-    &copy; 2026 ModCore — Все права защищены.
-</footer>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180/21262d/9d50bb?text=Mod+Image" alt="Game" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">Название игры</h3>
+                <p class="card-desc">Короткое описание того, что дает твой мод.</p>
+                <a href="ССЫЛКА_НА_ФАЙЛ" class="btn-download">Скачать APK</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Mod Core. Все права защищены.
+    </footer>
 
 </body>
 </html>
-
